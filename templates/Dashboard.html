@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lobster&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&family=Roboto+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>DashBoard</title>
+    <style>
+        body {
+            background-color: #000;
+            color:white;
+            /* font-family: Arial, sans-serif; */
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }    
+        
+        .card-containers{
+            display: flex;
+            gap:3rem;
+            justify-content: center;
+            padding:2rem;
+        }
+        
+        .card-containers .col{
+            border: 1px solid white;
+            padding:20px;
+            border-radius: 5px;
+            width:100%;
+            box-shadow: #181818 0px 54px 55px, #272727 0px -12px 30px, #2e2e2e 0px 4px 6px, #2b2b2b 0px 12px 13px, #252525 0px -3px 5px;
+        }
+
+        button{
+            background-color: #47ffc4;
+            border:none;
+            border-radius: 5px;
+            font-family: 'Inter';
+        }
+
+    </style>
+    
+</head>
+<body>
+    <!-- <p style="height: 100px;"></p> -->
+    <div class="container">
+        <h3 style="text-align:center; font-style:normal; color: #47ffc4; margin-top: 5rem; font-size: 2rem;">Welcome to your Dashboard</h3>
+        <div>
+            <div class="row card-containers" style="margin-top: 4rem;">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                           <!-- <p style="height: 10px;"></p> -->
+                          <span class="card-title" style="font-size: 1.3rem; color:#47ffc4; font-weight: bold;">Net Balance</span>
+                          <p style="font-family: 20px;">View Balance</p>
+                          <div class="alert alert-primary" role="alert">
+                              Rs. {{netBls}}
+                          </div>
+                          <a href="allTransaction" class="btn btn-primary btn-sm">
+                            <button style="cursor:pointer; width: 100%; margin-top: 2rem; padding:.4rem">
+                                View All Transactions
+                            </button>
+                        </a>
+                          
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title" style="margin:0; font-size: 1.3rem; color:#47ffc4; font-weight: bold;">Total Expense</h5>
+                          <p style="font-family: 20px;">View total expense here</p>
+                          <div class="alert alert-danger" role="alert">
+                              Rs. {{exp}} 
+                          </div>
+                          <a href="ShowExpense" class="btn btn-primary btn-sm">
+
+                            <button style="cursor:pointer; width: 100%; margin-top: 2rem; padding:.4rem">
+                                View All Expenses
+                            </button>
+                        </a>
+                          
+                        </div>
+                        
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title" style="margin:0; font-size: 1.3rem; color:#47ffc4; font-weight: bold;">Total Income</h5>
+                          <p style="font-family: 20px;">View total income here</p>
+                          <div class="alert alert-success" role="alert">
+                              Rs. {{inc}}
+                          </div> 
+
+                          <a href="ShowIncome" class="btn btn-primary btn-sm">
+
+                            <button style="cursor:pointer; width: 100%; margin-top: 2rem; padding:.4rem">
+                                View All Incomes
+                            </button>
+                        </a>
+                        
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

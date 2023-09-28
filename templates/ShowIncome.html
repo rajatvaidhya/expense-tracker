@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lobster&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&family=Roboto+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <title>ShowingIncome</title>
+    <style>
+        body {
+            background-color: #000; /* Change the background color */
+            font-family: Arial, sans-serif; /* Use a more common font */
+            margin: 0;
+            padding: 0;
+            color:white;
+            font-family: 'Inter';
+        }
+    
+        h1 {
+            color: #47ffc4;
+            text-align: center;
+            padding: 20px;
+            font-size: 28px;
+        }
+    
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 0 auto;
+        }
+    
+        table, th, td {
+            border: 2px solid black;
+        }
+    
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+    
+        th {
+            background-color: lightpink;
+            font-style: normal;
+            font-size: 16px;
+        }
+    
+        td {
+            font-size: 16px;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1 style="color: #47ffc4; text-align: center;">This is your Recent Incomes</h1>
+    <table border="1" style="background-color: #47ffc4;
+    font-style:normal;
+    font-size: 16px;
+    padding: 8px 8px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    color:black;
+    margin-bottom: 10%;" align="center">{% for x in record %}
+        <td><div>{{x.id}}</div></td>
+        <td><div>{{x.Date}}</div></td>
+        <td><div>{{x.Time}}</div></td>
+        <td><div>{{x.Source}}</div></td>
+        <td><div>{{x.Amount}}</div></td>
+        <td><div>{{x.Remark}}</div></td>
+        {% endfor %}</table>
+</body>
+</html>
